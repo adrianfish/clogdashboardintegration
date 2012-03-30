@@ -53,7 +53,7 @@ public abstract class ClogDashboardEntityType implements EntityType{
 	/**
 	 * Implement this to map Sakai events to dashboard display strings
 	 */
-	public final String getString(String key, String dflt) {
+	public final String getEventDisplayString(String key, String dflt) {
 		ResourceLoader rl = new ResourceLoader("dashboard");
 		if(ClogManager.CLOG_POST_CREATED.equals(key)) {
 			return rl.getString("new_blog_post");
