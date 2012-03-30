@@ -14,9 +14,6 @@ public class ClogNewPostEventProcessor extends ClogDashboardEventProcessor{
 	
 	public void init() {
 		sourceType = dashboardLogic.getSourceType(IDENTIFIER);
-		if(sourceType == null) {
-			sourceType = dashboardLogic.createSourceType(IDENTIFIER);
-		}
 	}
 	
 	public String getEventIdentifer() {
