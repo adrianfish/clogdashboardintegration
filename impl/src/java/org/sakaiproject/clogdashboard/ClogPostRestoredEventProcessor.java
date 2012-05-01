@@ -6,7 +6,7 @@ import org.sakaiproject.dash.model.NewsItem;
 import org.sakaiproject.dash.model.SourceType;
 import org.sakaiproject.event.api.Event;
 
-public class ClogNewPostEventProcessor extends ClogDashboardEventProcessor{
+public class ClogPostRestoredEventProcessor extends ClogDashboardEventProcessor{
 	
 	public static final String IDENTIFIER = "clog-post";
 	
@@ -17,7 +17,7 @@ public class ClogNewPostEventProcessor extends ClogDashboardEventProcessor{
 	}
 	
 	public String getEventIdentifer() {
-		return ClogManager.CLOG_POST_CREATED;
+		return ClogManager.CLOG_POST_RESTORED;
 	}
 
 	public void processEvent(Event event) {
@@ -32,7 +32,7 @@ public class ClogNewPostEventProcessor extends ClogDashboardEventProcessor{
 		}
 		NewsItem newsItem = dashboardLogic.createNewsItem(post.getTitle()
 										,event.getEventTime()
-										,ClogManager.CLOG_POST_CREATED
+										,ClogManager.CLOG_POST_RESTORED
 										,resource
 										,dashboardLogic.getContext(event.getContext())
 										,sourceType

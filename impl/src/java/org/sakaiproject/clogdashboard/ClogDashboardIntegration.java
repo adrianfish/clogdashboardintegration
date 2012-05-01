@@ -49,10 +49,26 @@ public class ClogDashboardIntegration {
 		fet.setUserDirectoryService(userDirectoryService);
 		dashboardLogic.registerEntityType(fet);
 
-		ClogNewPostEventProcessor fproc = new ClogNewPostEventProcessor();
-		fproc.setClogManager(clogManager);
-		fproc.setDashboardLogic(dashboardLogic);
-		fproc.init();
-		dashboardLogic.registerEventProcessor(fproc);
+		ClogPostCreatedEventProcessor pcproc = new ClogPostCreatedEventProcessor();
+		pcproc.setClogManager(clogManager);
+		pcproc.setDashboardLogic(dashboardLogic);
+		pcproc.init();
+		dashboardLogic.registerEventProcessor(pcproc);
+		
+		ClogPostRecycledEventProcessor pdproc = new ClogPostRecycledEventProcessor();
+		pdproc.setClogManager(clogManager);
+		pdproc.setDashboardLogic(dashboardLogic);
+		dashboardLogic.registerEventProcessor(pdproc);
+		
+		ClogPostRestoredEventProcessor prproc = new ClogPostRestoredEventProcessor();
+		prproc.setClogManager(clogManager);
+		prproc.setDashboardLogic(dashboardLogic);
+		prproc.init();
+		dashboardLogic.registerEventProcessor(prproc);
+		
+		ClogPostWithdrawnEventProcessor pwproc = new ClogPostWithdrawnEventProcessor();
+		pwproc.setClogManager(clogManager);
+		pwproc.setDashboardLogic(dashboardLogic);
+		dashboardLogic.registerEventProcessor(pwproc);
 	}
 }

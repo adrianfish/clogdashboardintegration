@@ -9,6 +9,7 @@ import org.sakaiproject.clog.api.ClogFunctions;
 import org.sakaiproject.clog.api.ClogManager;
 import org.sakaiproject.clog.api.datamodel.Post;
 import org.sakaiproject.dash.entity.EntityType;
+import org.sakaiproject.entity.api.Entity;
 import org.sakaiproject.site.cover.SiteService;
 import org.sakaiproject.user.api.UserDirectoryService;
 import org.sakaiproject.util.ResourceLoader;
@@ -55,9 +56,13 @@ public abstract class ClogDashboardEntityType implements EntityType{
 	 */
 	public final String getEventDisplayString(String key, String dflt) {
 		ResourceLoader rl = new ResourceLoader("dashboard");
-		if(ClogManager.CLOG_POST_CREATED.equals(key)) {
+		
+		if(ClogManager.CLOG_POST_CREATED.equals(key) || ClogManager.CLOG_POST_RESTORED.equals(key)) {
 			return rl.getString("new_blog_post");
+		} else if(ClogManager.CLOG_COMMENT_CREATED.equals(key)) {
+			return rl.getString("new_blog_comment");
 		}
+		
 		return null;
 	}
 
@@ -67,7 +72,12 @@ public abstract class ClogDashboardEntityType implements EntityType{
 
 	public List<String> getUsersWithAccess(String reference) {
 		List<String> users = new ArrayList<String>();
-		String postId = reference.substring(reference.lastIndexOf("/") + 1);
+		String[] parts = reference.split(Entity.SEPARATOR);
+			
+		String postId = "";
+		if(parts.length >= 5) {
+			postId = parts[4];
+		}
 		try {
 			Post post = clogManager.getPostHeader(postId);
 			if(post.isPrivate()) {

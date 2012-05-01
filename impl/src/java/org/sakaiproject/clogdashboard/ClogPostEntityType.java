@@ -19,7 +19,7 @@ public class ClogPostEntityType extends ClogDashboardEntityType{
 	}
 
 	public String getIdentifier() {
-		return ClogNewPostEventProcessor.IDENTIFIER;
+		return ClogPostCreatedEventProcessor.IDENTIFIER;
 	}
 
 	public Map<String, Object> getValues(String entityReference, String localeCode) {
@@ -47,7 +47,7 @@ public class ClogPostEntityType extends ClogDashboardEntityType{
         	values.put(VALUE_USER_NAME, userDirectoryService.getUser(post.getCreatorId()).getDisplayName());
         } catch (UserNotDefinedException unde) {
         }
-        values.put(EntityType.VALUE_ENTITY_TYPE, ClogNewPostEventProcessor.IDENTIFIER);
+        values.put(EntityType.VALUE_ENTITY_TYPE, ClogPostCreatedEventProcessor.IDENTIFIER);
 		return values;
 	}
 }
