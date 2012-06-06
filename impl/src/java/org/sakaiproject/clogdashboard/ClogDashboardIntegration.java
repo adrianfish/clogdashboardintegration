@@ -39,6 +39,9 @@ public class ClogDashboardIntegration {
         this.userDirectoryService = userDirectoryService;
     }
 
+    /**
+     * Register all the CLOG event processors with the Dashboard 
+     */
 	public void init() {
 
 		if (logger.isDebugEnabled())

@@ -11,6 +11,10 @@ public class ClogPostRecycledEventProcessor extends ClogDashboardEventProcessor{
 		return ClogManager.CLOG_POST_RECYCLED;
 	}
 
+	/**
+	 * Process the clog.post.recycyled event. The aim is to remove the
+	 * NewsItem for this post.
+	 */
 	public void processEvent(Event event) {
 		String resource = event.getResource();
 		dashboardLogic.removeNewsItem(resource);
