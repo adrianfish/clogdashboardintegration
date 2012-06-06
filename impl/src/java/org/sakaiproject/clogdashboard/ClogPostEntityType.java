@@ -40,7 +40,6 @@ public class ClogPostEntityType extends ClogDashboardEntityType{
         Map<String, Object> values = new HashMap<String, Object>();
         DateFormat df = DateFormat.getDateTimeInstance();
         values.put(VALUE_NEWS_TIME, df.format(new Date(post.getCreatedDate())));
-        values.put("user-id", post.getCreatorId());
         values.put(VALUE_MORE_INFO, infoList);
         values.put(VALUE_TITLE,post.getTitle());
         try {
