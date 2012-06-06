@@ -20,7 +20,7 @@
 	<properties>
         <log4j.version>1.2.8</log4j.version>
         <commons-lang.version>2.4</commons-lang.version>
-        <clog.version>0.9.3-SNAPSHOT</clog.version>
+        <clog.version>0.9.4-SNAPSHOT</clog.version>
         <dashboard.version>1.0-SNAPSHOT</dashboard.version>
     	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

@@ -11,6 +11,10 @@ public class ClogPostWithdrawnEventProcessor extends ClogDashboardEventProcessor
 		return ClogManager.CLOG_POST_WITHDRAWN;
 	}
 
+	/**
+	 * Process the clog.post.withdrawn event. The aim is to remove the
+	 * NewsItem for this post.
+	 */
 	public void processEvent(Event event) {
 		String resource = event.getResource();
 		dashboardLogic.removeNewsItem(resource);

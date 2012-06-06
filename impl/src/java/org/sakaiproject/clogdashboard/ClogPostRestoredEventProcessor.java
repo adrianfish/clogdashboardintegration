@@ -20,6 +20,10 @@ public class ClogPostRestoredEventProcessor extends ClogDashboardEventProcessor{
 		return ClogManager.CLOG_POST_RESTORED;
 	}
 
+	/**
+	 * Process the clog.post.restored event. The aim is to create an appropriate
+	 * Dashboard NewsItem for it to render. 
+	 */
 	public void processEvent(Event event) {
 		String resource = event.getResource();
 		String postId = resource.substring(resource.lastIndexOf("/") + 1);

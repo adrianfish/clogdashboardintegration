@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.sakaiproject.clog.api.ClogFunctions;
 import org.sakaiproject.clog.api.ClogManager;
 import org.sakaiproject.clog.api.datamodel.Post;
 import org.sakaiproject.dash.entity.EntityType;
@@ -66,7 +65,7 @@ public abstract class ClogDashboardEntityType implements EntityType{
 		return null;
 	}
 
-	public final boolean isAvailable(String arg0) {
+	public final boolean isAvailable(String entityReference) {
 		return true;
 	}
 
@@ -93,7 +92,7 @@ public abstract class ClogDashboardEntityType implements EntityType{
 		return null;
 	}
 
-	public boolean isUserPermitted(String arg0, String arg1, String arg2) {
+	public boolean isUserPermitted(String sakaiUserId, String entityReference, String contextId) {
 		return true;
 	}
 }
