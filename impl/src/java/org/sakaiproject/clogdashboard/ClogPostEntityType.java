@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.sakaiproject.clog.api.datamodel.Post;
-import org.sakaiproject.dash.entity.EntityType;
+import org.sakaiproject.dash.entity.DashboardEntityInfo;
 import org.sakaiproject.user.api.UserNotDefinedException;
 import org.sakaiproject.util.ResourceLoader;
 
@@ -46,7 +46,7 @@ public class ClogPostEntityType extends ClogDashboardEntityType{
         	values.put(VALUE_USER_NAME, userDirectoryService.getUser(post.getCreatorId()).getDisplayName());
         } catch (UserNotDefinedException unde) {
         }
-        values.put(EntityType.VALUE_ENTITY_TYPE, ClogPostCreatedEventProcessor.IDENTIFIER);
+        values.put(DashboardEntityInfo.VALUE_ENTITY_TYPE, ClogPostCreatedEventProcessor.IDENTIFIER);
 		return values;
 	}
 }

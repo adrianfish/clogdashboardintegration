@@ -7,13 +7,13 @@ import java.util.Map;
 
 import org.sakaiproject.clog.api.ClogManager;
 import org.sakaiproject.clog.api.datamodel.Post;
-import org.sakaiproject.dash.entity.EntityType;
+import org.sakaiproject.dash.entity.DashboardEntityInfo;
 import org.sakaiproject.entity.api.Entity;
 import org.sakaiproject.site.cover.SiteService;
 import org.sakaiproject.user.api.UserDirectoryService;
 import org.sakaiproject.util.ResourceLoader;
 
-public abstract class ClogDashboardEntityType implements EntityType{
+public abstract class ClogDashboardEntityType implements DashboardEntityInfo{
 	
 	protected ClogManager clogManager;
 	public void setClogManager(ClogManager clogManager) {
