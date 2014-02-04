@@ -9,9 +9,9 @@
 	<packaging>pom</packaging>
 
   	<parent>
-    	<artifactId>clogdashboard</artifactId>
     	<groupId>org.sakaiproject.clogdashboard</groupId>
-    	<version>0.1-SNAPSHOT</version>
+        <artifactId>clogdashboard</artifactId>
+    	<version>0.2-SNAPSHOT</version>
   	</parent>
 
 	<dependencies>
