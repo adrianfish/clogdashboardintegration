@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  	<name>CLOG DASHBOARD INTEGRATION</name>
-  	<groupId>org.sakaiproject.clogdashboard</groupId>
-  	<artifactId>clogdashboard</artifactId>
-  	<packaging>pom</packaging>
+    <name>CLOG DASHBOARD INTEGRATION</name>
+    <groupId>org.sakaiproject.clogdashboard</groupId>
+    <artifactId>clogdashboard</artifactId>
+    <packaging>pom</packaging>
     <version>0.2-SNAPSHOT</version>
 
     <parent>
@@ -16,26 +16,26 @@
         <artifactId>master</artifactId>
         <version>10.0-SNAPSHOT</version>
     </parent>
-  	
-  	<organization>
-    	<name>Lancaster Centre for e-Science</name>
-    	<url>http://e-science.lancs.ac.uk</url>
-  	</organization>
-  	<inceptionYear>2005</inceptionYear>
 
-  	<developers>
-    	<developer>
-      		<name>Adrian Fish</name>
-      		<email>a.fish@lancaster.ac.uk</email>
-    	</developer>
-  	</developers>
+    <organization>
+        <name>Lancaster Centre for e-Science</name>
+        <url>http://e-science.lancs.ac.uk</url>
+    </organization>
+    <inceptionYear>2005</inceptionYear>
 
-	<contributors>
+    <developers>
+        <developer>
+            <name>Adrian Fish</name>
+            <email>a.fish@lancaster.ac.uk</email>
+        </developer>
+    </developers>
+
+    <contributors>
         <contributor>
             <name>Anthony Whyte</name>
             <email>arwhyte@umich.edu</email>
         </contributor>
-	</contributors>
+    </contributors>
 
     <properties>
         <clog.version>0.9.5-SNAPSHOT</clog.version>
@@ -43,25 +43,25 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-  	<modules>
-    	<module>impl</module>
-    	<module>pack</module>
-    	<module>assembly</module>
-  	</modules>
+    <modules>
+        <module>impl</module>
+        <module>pack</module>
+        <module>assembly</module>
+    </modules>
 
-	<dependencyManagement>
+    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.sakaiproject.clog</groupId>
                 <artifactId>clog-api</artifactId>
                 <version>${clog.version}</version>
-	  			<scope>provided</scope>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.sakaiproject.dash</groupId>
                 <artifactId>dashboard-api</artifactId>
                 <version>${dashboard.version}</version>
-	  			<scope>provided</scope>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
