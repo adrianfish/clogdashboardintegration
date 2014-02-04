@@ -5,16 +5,17 @@
 	
   	<modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.sakaiproject.clogdashboard</groupId>
+        <artifactId>clogdashboard</artifactId>
+        <version>0.2-SNAPSHOT</version>
+    </parent>
+
   	<name>CLOG DASHBOARD INTEGRATION IMPL</name>
-  	<artifactId>clogdashboard-impl</artifactId>
   	<groupId>org.sakaiproject.clogdashboard</groupId>
+    <artifactId>clogdashboard-impl</artifactId>
+
   	<packaging>jar</packaging>
-  
-  	<parent>
-    	<artifactId>clogdashboard</artifactId>
-    	<groupId>org.sakaiproject.clogdashboard</groupId>
-    	<version>0.1-SNAPSHOT</version>
-  	</parent>
   
 	<dependencies>
 		<dependency>
@@ -37,8 +38,8 @@
             <groupId>org.sakaiproject.kernel</groupId>
             <artifactId>sakai-kernel-util</artifactId>
         </dependency>
-		
 	</dependencies>
+
 	<build>
     <resources>
       <resource>
