@@ -49,6 +49,12 @@
         <module>assembly</module>
     </modules>
 
+    <scm>
+        <connection>scm:git:git://github.com/adrianfish/clogdashboardintegration.git</connection>
+        <developerConnection>scm:git:git://github.com/adrianfish/clogdashboardintegration.git</developerConnection>
+        <url>https://github.com/adrianfish/clogdashboardintegration</url>
+    </scm>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
