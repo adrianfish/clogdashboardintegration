@@ -9,12 +9,12 @@
     <groupId>org.sakaiproject.clogdashboard</groupId>
     <artifactId>clogdashboard</artifactId>
     <packaging>pom</packaging>
-    <version>0.2-SNAPSHOT</version>
+    <version>11-SNAPSHOT</version>
 
     <parent>
         <groupId>org.sakaiproject</groupId>
         <artifactId>master</artifactId>
-        <version>10.0-SNAPSHOT</version>
+        <version>11-SNAPSHOT</version>
         <relativePath>../master/pom.xml</relativePath>
     </parent>
 
@@ -39,7 +39,7 @@
     </contributors>
 
     <properties>
-        <clog.version>0.9.5-SNAPSHOT</clog.version>
+        <clog.version>11-SNAPSHOT</clog.version>
         <dashboard.version>1.0-SNAPSHOT</dashboard.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
