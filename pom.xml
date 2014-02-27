@@ -40,7 +40,7 @@
 
     <properties>
         <clog.version>11-SNAPSHOT</clog.version>
-        <dashboard.version>1.0-SNAPSHOT</dashboard.version>
+        <dashboard.version>11-SNAPSHOT</dashboard.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
