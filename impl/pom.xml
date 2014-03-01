@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.sakaiproject.clogdashboard</groupId>
         <artifactId>clogdashboard</artifactId>
-        <version>0.2-SNAPSHOT</version>
+        <version>11-SNAPSHOT</version>
     </parent>
 
     <name>CLOG DASHBOARD INTEGRATION IMPL</name>
